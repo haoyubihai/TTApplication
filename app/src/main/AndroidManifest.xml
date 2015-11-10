@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="test.vko.cn.ttapplication">
+    // 允许程序打开网络sockets
+    <uses-permission android:name="android.permission.INTERNET" />
+    // 允许程序访问有关的网络信息
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    // 允许程序访问Wi-Fi网络状态信息
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    // 允许应用写（非读）用户的外部存储器
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    // 允许读取电话的状态
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    // 允许一个程序获取信息有关当前或最近运行的任务，一个缩略的任务状态，是否活动等等
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    // 允许程序录制音频
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    // 允许应用程序修改全局声音设置的权限
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    // GPS定位权限(非必选，由应用选择是否需要)
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    // 允许程序读取用户联系人数据(非必选，由应用选择是否需要)
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    // 允许访问振动设备(非必选,由应用选择是否需要)
+    <uses-permission android:name="android.permission.VIBRATE" />
+    //** 如果您需要实现实时音视频功能，需要增加以下配置选项**//
+
+    // 允许程序访问Wi-Fi网络状态信息
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    // 允许程序禁用键盘锁(非必选,由应用选择是否需要)
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    // 允许使用PowerManager的WakeLocks保持进程在休眠时从屏幕消失(非必选,由应用选择是否需要)
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitys.MainActivity" />
+        <activity
+            android:name=".activitys.NavigationActivity"
+            android:theme="@style/Theme.DesignDemo" />
+        <activity
+            android:name=".activitys.CoordinatorActivity"
+            android:label="@string/title_activity_coordinator"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activitys.LoadingOfSouGouActivity"></activity>
+        <activity android:name=".activitys.GifTestActivity"></activity>
+        <activity android:name=".activitys.BaseActivity"></activity>
+        <activity android:name=".activitys.StarActivity"></activity>
+        <activity android:name=".activitys.ABCD"></activity>
+        <activity android:name=".activitys.TreeIconLineActivity"></activity>
+        <activity android:name=".activitys.RecycleViewActivity"></activity>
+        <activity android:name=".activitys.ShapeDrawableActivity"></activity>
+        <activity android:name=".activitys.im.ImHomeActivity"></activity>
+
+        <!-- 容联云################################################## -->
+        // ECSDK核心服务类
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- 容联云################################################## -->
+
+        <activity android:name=".activitys.AVLoadingIndicatorViewActivity"></activity>
+        <activity android:name=".activitys.ObserverActivity"></activity>
+        <activity android:name=".activitys.CanvasTestActivity"></activity>
+        <activity android:name=".activitys.BenzierActivity"></activity>
+    </application>
+
+</manifest>

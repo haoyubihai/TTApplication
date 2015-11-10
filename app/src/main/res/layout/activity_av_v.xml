@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.vko.cn.ttapplication.activitys.AVLoadingIndicatorViewActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--
+        BallPulse
+        BallGridPulse
+        BallClipRotate
+        BallClipRotatePulse
+        SquareSpin
+        BallClipRotateMultiple
+        BallPulseRise
+        BallRotate
+        CubeTransition
+        BallZigZag
+        BallZigZagDeflect
+        BallTrianglePath
+        BallScale
+        LineScale
+        LineScaleParty
+        BallScaleMultiple
+        BallPulseSync
+        BallBeat
+        LineScalePulseOut
+        LineScalePulseOutRapid
+        BallScaleRipple
+        BallScaleRippleMultiple
+        BallSpinFadeLoader
+        LineSpinFadeLoader
+        TriangleSkewSpin
+        Pacman
+        BallGridBeat
+        SemiCircleSpin
+        -->
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallPulse"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallGridPulse"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallClipRotate"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallClipRotatePulse"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="SquareSpin"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallClipRotateMultiple"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallPulseRise"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallRotate"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="CubeTransition"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallZigZag"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallZigZagDeflect"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallTrianglePath"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallScale"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="LineScale"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="LineScaleParty"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallPulseSync"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallBeat"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="LineScalePulseOut"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="LineScalePulseOutRapid"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallScaleRipple"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallScaleRippleMultiple"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="LineSpinFadeLoader"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="TriangleSkewSpin"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="Pacman"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="BallGridBeat"
+            app:indicator_color="#986956" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:indicator="SemiCircleSpin"
+            app:indicator_color="#986956" />
+    </LinearLayout>
+</ScrollView>

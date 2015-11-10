@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:checkable="true"
+            android:title="home" />
+        <item
+            android:checkable="true"
+            android:title="car" />
+        <item
+            android:checkable="true"
+            android:title="book" />
+        <item
+            android:checkable="true"
+            android:title="apple" />
+        <item
+            android:checkable="true"
+            android:title="desk" />
+        <item
+            android:checkable="true"
+            android:title="eat" />
+
+
+    </group>
+    <item android:title="sub_title">
+        <menu>
+            <item
+                android:checkable="true"
+                android:title="sub1"></item>
+            <item
+                android:checkable="true"
+                android:title="sub2"></item>
+        </menu>
+    </item>
+</menu>

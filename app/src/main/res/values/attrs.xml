@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="StarView">
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="textContent" format="string" />
+        <attr name="textColor" format="color" />
+        <!--矩形背景色-->
+        <attr name="textBgColor" format="color" />
+        <attr name="textSize" format="integer" />
+        <!--x,y,方向的圆角半径大小-->
+        <attr name="textbgX" format="integer" />
+        <attr name="textbgY" format="integer" />
+        <!--矩形上边距离坐标图标的顶部高度-->
+        <attr name="marginTopLeftIconRate" format="integer" />
+    </declare-styleable>
+</resources>

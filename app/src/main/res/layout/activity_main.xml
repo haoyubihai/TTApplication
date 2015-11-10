@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fitsSystemWindows="true"
+    tools:context="test.vko.cn.ttapplication.activitys.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/go_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/snack_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SnackBar" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/fab_margin" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.design.widget.TabLayout>
+
+        <Button
+            android:id="@+id/btn_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="navigationView" />
+
+        <Button
+            android:id="@+id/btn_coor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout" />
+
+        <Button
+            android:id="@+id/btn_loadSougou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LoadingAniOfSouGou" />
+
+        <Button
+            android:id="@+id/btn_load_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LoadGifAni" />
+
+        <Button
+            android:id="@+id/btn_star_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StarView" />
+
+        <Button
+            android:id="@+id/btn_abcd_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABCD" />
+
+        <Button
+            android:id="@+id/btn_tree_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TREE_ICON_LINE_VIEW" />
+
+        <Button
+            android:id="@+id/btn_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerVIEW" />
+
+        <Button
+            android:id="@+id/btn_shape_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHAPE_DRABLE_VIEW" />
+
+        <Button
+            android:id="@+id/btn_avLoading_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AV_LOADING_INDICATOR_VIEW" />
+
+        <Button
+            android:id="@+id/btn_observer_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OBSERVER" />
+
+        <Button
+            android:id="@+id/btn_canvas_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Canvas" />
+
+        <Button
+            android:id="@+id/btn_benzier_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="benzierView" />
+    </LinearLayout>
+</ScrollView>

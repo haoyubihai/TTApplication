@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\newas\build-tools\gradle-2.2.1-all\gradle-2.2.1-all\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1-2d98b6803bb242ecc21f09db8353c805590789e5.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\libs\android-support-v7-recyclerview.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7c0018e9838fc8c654c6fa83a110c4600b46febd">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\android-support-v7-recyclerview-8594699504a8e3e405309d92322759923f6d7d1e.jar" />
+    </item>
+    <item
+        jar="C:\Users\JiaRH\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-c87ca5dde92e93b7a1ac1535da45a96c1a0eceef.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\build\intermediates\exploded-aar\com.wang.avi\library\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="476390e81d32f9d08f9f5aab6c2b28f314a37828">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\classes-b21654145f88b8ff143462700b30de958699ab68.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\classes-03c39645ec6fa945c254ba267350ed06084241ff.jar" />
+    </item>
+    <item
+        jar="D:\newas\build-tools\gradle-2.2.1-all\gradle-2.2.1-all\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\library-2.4.0-dfed8434b840ef845441349fa626b9dcfb9ca9bd.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\classes-5d291660f82213f58d4c50ee6b454d051420ddfd.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-6da7a699a34114971e249e535bfccbfeb69e8691.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\classes-6cc6e6efd21d21c8dac1e9911c84870b11d7fb80.jar" />
+    </item>
+    <item
+        jar="D:\newas\build-tools\gradle-2.2.1-all\gradle-2.2.1-all\caches\modules-2\files-2.1\com.readystatesoftware.systembartint\systembartint\1.0.3\de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287\systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\systembartint-1.0.3-c840db6eabb15f78b6b7ec5f27afe4c4d492614a.jar" />
+    </item>
+    <item
+        jar="D:\as\TTApplication\app\libs\Yuntx_IMLib_v5.1.6r.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c0bffaddbfd214d15b8a71406906f375b1c936f6">
+        <dex dex="D:\as\TTApplication\app\build\intermediates\pre-dexed\debug\Yuntx_IMLib_v5.1.6r-11b521f727962cce5258aaf7a6ea17ad9fb5c47f.jar" />
+    </item>
+
+</items>
