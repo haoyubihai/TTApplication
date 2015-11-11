@@ -1,4 +1,4 @@
-package test.vko.cn.ttapplication;
+package test.vko.cn.ttapplication.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import test.vko.cn.ttapplication.activitys.MainActivity;
+import test.vko.cn.ttapplication.R;
 
 public class ScrollingActivity extends AppCompatActivity {
 
