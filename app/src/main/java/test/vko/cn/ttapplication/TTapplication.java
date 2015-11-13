@@ -3,8 +3,6 @@ package test.vko.cn.ttapplication;
 import android.app.Application;
 import android.content.Context;
 
-import test.vko.cn.ttapplication.presenter.HuanXinHelper;
-
 /**
  * Created by JiaRH on 2015/11/10.
  */
@@ -16,6 +14,7 @@ public class TTapplication extends Application {
 
         return INSTANCE;
     }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -29,6 +28,8 @@ public class TTapplication extends Application {
     }
 
     private void initHuanXin() {
-        HuanXinHelper.getInstance().init(mContext);
+//        HuanXinHelper.getInstance().init(mContext);
+
     }
+
 }
