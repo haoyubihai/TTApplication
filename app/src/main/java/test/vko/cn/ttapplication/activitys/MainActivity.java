@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnCanvasView;
     @Bind(R.id.btn_benzier_view)
     Button btnBenzierView;
+    @Bind(R.id.btn_ship_view)
+    Button btnShipView;
 
 
     @Override
@@ -198,6 +200,12 @@ public class MainActivity extends AppCompatActivity {
     public void onBenZierClick() {
 
         Intent i = new Intent(this, BenzierActivity.class);
+        startActivity(i);
+    }
+    @OnClick(R.id.btn_ship_view)
+    public void onShipClick() {
+
+        Intent i = new Intent(this, ShipMoveActivity.class);
         startActivity(i);
     }
 

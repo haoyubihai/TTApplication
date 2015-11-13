@@ -30,4 +30,5 @@ dependencies {
     compile files('libs/Yuntx_IMLib_v5.1.6r.jar')
     compile 'com.wang.avi:library:1.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
+    compile files('libs/easemobchat_2.2.3.jar')
 }

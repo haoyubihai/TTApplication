@@ -5,9 +5,15 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PathMeasure;
 import android.graphics.PointF;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+
+import com.nineoldandroids.animation.ObjectAnimator;
+import com.nineoldandroids.animation.ValueAnimator;
 
 import test.vko.cn.ttapplication.commonutils.DpUtils;
 import test.vko.cn.ttapplication.commonutils.GeometryUtil;
@@ -31,6 +37,11 @@ public class ShipMovingView extends View {
     private PointF anchorPointF2;
     private int screenWith, screenHeight;
     private Path mPath;
+    /**
+     * 记录当前运动点的位置
+     */
+    private float[] mCurrentPosition = new float[2];
+    private PathMeasure mPathMeasure;
 
     public ShipMovingView(Context context) {
         this(context, null);
@@ -55,6 +66,9 @@ public class ShipMovingView extends View {
     private void initData(Context context) {
         screenWith = DpUtils.ScreenWidth(context);
         screenHeight = DpUtils.ScreenHeight(context);
+        mCurrentPosition[0]=0;
+        mCurrentPosition[1]=screenHeight/2;
+
     }
 
 
@@ -84,7 +98,7 @@ public class ShipMovingView extends View {
         mPaint.setColor(color);
         mPaint.setStrokeWidth(waveWidth);
         mPaint.setStyle(Paint.Style.FILL);
-
+        mPath = new Path();
     }
 
     @Override
@@ -94,16 +108,40 @@ public class ShipMovingView extends View {
     }
 
     private void drawPath(Canvas canvas) {
-        canvas.restore();
+//        canvas.restore();
+//        drawCircle(canvas);
+        mPath.reset();
+//        setPontFsAndPath(-screenWith / 2, 0);
+//        drawMovePath(canvas);
         setPontFsAndPath(0, screenWith / 2);
         drawMovePath(canvas);
         setPontFsAndPath(screenWith / 2, screenWith);
         drawMovePath(canvas);
+        mPathMeasure = new PathMeasure(mPath,true);
+        drawCircle(canvas);
+//        move();
+//        startBallAni();
+        invalidate();
+    }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                startBallAni();
+                break;
+        }
+        return true;
+    }
+
+    private void drawCircle(Canvas canvas) {
+        canvas.drawCircle(mCurrentPosition[0], mCurrentPosition[1], 30, mPaint);
+        invalidate();
     }
 
     private void drawMovePath(Canvas canvas) {
         canvas.drawPath(mPath, mPaint);
+        invalidate();
     }
 
     private void setPontFsAndPath(int startX, int midX) {
@@ -112,9 +150,36 @@ public class ShipMovingView extends View {
     }
 
     private void initPath() {
-        mPath = new Path();
+
         mPath.moveTo(startPointFs[0].x, startPointFs[0].y);
         mPath.cubicTo(anchorPointF1.x, anchorPointF1.y, anchorPointF2.x, anchorPointF2.y, endPointFs[0].x, endPointFs[0].y);
     }
 
+    private void move(){
+        ObjectAnimator moveAni = ObjectAnimator.ofFloat(this,"translationX",0,screenWith/2);
+        moveAni.setDuration(5000);
+        moveAni.setRepeatCount(Integer.MAX_VALUE);
+        moveAni.setRepeatMode(ValueAnimator.RESTART);
+        moveAni.setInterpolator(new LinearInterpolator());
+        moveAni.start();
+    }
+    /**
+     * 开始小球的运动
+     */
+    private void startBallAni() {
+        android.animation.ValueAnimator valueAnimator = android.animation.ValueAnimator.ofFloat(0, mPathMeasure.getLength());
+        valueAnimator.setDuration(15000);
+//        valueAnimator.setRepeatMode(valueAnimator.REVERSE);
+        valueAnimator.setRepeatCount(Integer.MAX_VALUE);
+        valueAnimator.setInterpolator(new LinearInterpolator());
+        valueAnimator.addUpdateListener(new android.animation.ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(android.animation.ValueAnimator animation) {
+                float value = (float) animation.getAnimatedValue();
+                mPathMeasure.getPosTan(value, mCurrentPosition, null);
+                postInvalidate();
+            }
+        });
+        valueAnimator.start();
+    }
 }
