@@ -17,4 +17,7 @@ public class DpUtils {
     public static int ScreenHeight(Context context) {
         return context.getResources().getDisplayMetrics().heightPixels;
     }
+    public static float ScreenDensity(Context context) {
+        return context.getResources().getDisplayMetrics().density;
+    }
 }

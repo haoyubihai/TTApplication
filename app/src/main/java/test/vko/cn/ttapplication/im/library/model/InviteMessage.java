@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test.vko.cn.ttapplication.models;
+package test.vko.cn.ttapplication.im.library.model;
 
 public class InviteMessage {
 	private String from;

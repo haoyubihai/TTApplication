@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnBenzierView;
     @Bind(R.id.btn_ship_view)
     Button btnShipView;
+    @Bind(R.id.btn_ship_wave_view)
+    Button btnShipWaveView;
 
 
     @Override
@@ -202,10 +204,18 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, BenzierActivity.class);
         startActivity(i);
     }
+
     @OnClick(R.id.btn_ship_view)
     public void onShipClick() {
 
         Intent i = new Intent(this, ShipMoveActivity.class);
+        startActivity(i);
+    }
+
+    @OnClick(R.id.btn_ship_wave_view)
+    public void onShipWaveClick() {
+
+        Intent i = new Intent(this, ShipWaveActivity.class);
         startActivity(i);
     }
 
