@@ -67,8 +67,9 @@ public class ShipWaveViewThrid extends View {
 
     private void initData(Context context) {
 
+
         mPointsList = new ArrayList<>();
-        boat = BitmapFactory.decodeResource(getResources(), R.drawable.earch);
+        boat = BitmapFactory.decodeResource(getResources(), R.drawable.boat1);
     }
 
     private void initPaint() {

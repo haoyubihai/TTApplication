@@ -131,5 +131,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ship_Move_View" />
+        <Button
+            android:id="@+id/btn_ship_wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ship_Wave_View" />
     </LinearLayout>
 </ScrollView>

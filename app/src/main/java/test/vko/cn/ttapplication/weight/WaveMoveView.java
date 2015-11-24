@@ -1,6 +1,7 @@
 package test.vko.cn.ttapplication.weight;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
@@ -41,13 +42,13 @@ public class WaveMoveView extends FrameLayout {
         swv2 = new ShipWaveView(context);
 
         boatView = new ShipWaveViewSecond(context);
-        swv0.setSpeed(5);
-        swv1.setSpeed(8);
-        swv2.setSpeed(10);
+        swv0.setSpeed(3);
+        swv1.setSpeed(5);
+        swv2.setSpeed(7);
 
-//        swv0.setColor(Color.BLUE);
-//        swv1.setColor(Color.BLUE);
-//        swv2.setColor(Color.BLUE);
+        swv0.setColor(Color.parseColor("#8800a9ff"));
+        swv1.setColor(Color.parseColor("#8800a9ff"));
+        swv2.setColor(Color.parseColor("#10a1ea"));
 
         swv0.setWAVE_HEIGHT(40);
         swv1.setWAVE_HEIGHT(35);

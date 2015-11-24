@@ -12,7 +12,6 @@ import android.graphics.PathMeasure;
 import android.graphics.PointF;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.animation.LinearInterpolator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,19 +55,13 @@ public class ShipWaveView extends View {
         super(context, attrs, defStyleAttr);
         initData(context);
         initPaint();
-        postDelayed(new Runnable() {
-            @Override
-            public void run() {
-//                startBallAni();
-//                startMove();
-            }
-        }, 300);
+
     }
 
     private void initData(Context context) {
 
         mPointsList = new ArrayList<>();
-        boat = BitmapFactory.decodeResource(getResources(), R.drawable.earch);
+        boat = BitmapFactory.decodeResource(getResources(), R.drawable.boat1);
     }
 
     private void initPaint() {
@@ -80,8 +73,17 @@ public class ShipWaveView extends View {
 
     }
 
+
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int withSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+        int withMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        if(withMode==MeasureSpec.AT_MOST&&heightMode==MeasureSpec.AT_MOST){
+            withSize = getMeasuredWidth();
+        }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
 
@@ -103,7 +105,7 @@ public class ShipWaveView extends View {
         mWavePath.close();
         mPathMeature = new PathMeasure(mWavePath, true);
         drawPath(canvas);
-//        drawBoat(canvas);
+
     }
 
     private void drawPath(Canvas canvas) {
@@ -113,30 +115,15 @@ public class ShipWaveView extends View {
         canvas.drawPath(mWavePath, mPaint);
     }
 
-    private void drawBoat(Canvas canvas) {
-        mPaint.setColor(Color.BLUE);
-        if (mCurrentPosition[0] > viewWidth||mCurrentPosition[0]<0) {
-            mCurrentPosition[0] = viewWidth;
-            resetAni();
-        }
-        canvas.drawBitmap(boat, mCurrentPosition[0], mCurrentPosition[1], mPaint);
-    }
 
-    private void resetAni() {
 
-        if (valueAnimator.isRunning()) {
-            valueAnimator.cancel();
-            startBallAni();
-        }
-
-    }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         viewWidth = getWidth();
         viewHeight = getHeight();
-        mLevelLine = viewHeight / 2;
+        mLevelLine = viewHeight/2;
         if (!isMeasured) {
 
             isMeasured = true;
@@ -164,17 +151,13 @@ public class ShipWaveView extends View {
                         break;
                 }
                 mPointsList.add(new PointF(x, y));
-                /**
-                 * 初始化小球的位置
-                 */
-                mCurrentPosition[0] = 0;
-                mCurrentPosition[1] = viewHeight/2;
+
             }
         }
     }
 
     public void startMove() {
-        ValueAnimator moveValue = valueAnimator.ofInt(0, mWaveWidth);
+        ValueAnimator moveValue = ValueAnimator.ofInt(0, mWaveWidth);
         moveValue.setDuration(10000);
         moveValue.setRepeatCount(-1);
         moveValue.setRepeatMode(ValueAnimator.RESTART);
@@ -226,23 +209,4 @@ public class ShipWaveView extends View {
         this.WAVE_HEIGHT = WAVE_HEIGHT;
     }
 
-    /**
-     * 开始小球的运动
-     */
-    public void startBallAni() {
-        valueAnimator = ValueAnimator.ofFloat(0, mPathMeature.getLength());
-        valueAnimator.setDuration(25000);
-        valueAnimator.setRepeatMode(ValueAnimator.RESTART);
-        valueAnimator.setRepeatCount(-1);
-        valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float value = (float) animation.getAnimatedValue();
-                mPathMeature.getPosTan(value, mCurrentPosition, null);
-                postInvalidate();
-            }
-        });
-        valueAnimator.start();
-    }
 }

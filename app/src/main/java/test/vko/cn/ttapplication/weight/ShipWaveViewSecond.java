@@ -65,7 +65,7 @@ public class ShipWaveViewSecond extends View {
             public void run() {
 
                 startBallAni();
-                startCircleUp();
+
 
             }
         }, 300);
@@ -74,7 +74,7 @@ public class ShipWaveViewSecond extends View {
     private void initData(Context context) {
 
         mPointsList = new ArrayList<>();
-        boat = BitmapFactory.decodeResource(getResources(), R.drawable.earch);
+        boat = BitmapFactory.decodeResource(getResources(), R.drawable.boat2);
     }
 
     private void initPaint() {
@@ -110,14 +110,10 @@ public class ShipWaveViewSecond extends View {
         mPathMeature = new PathMeasure(mWavePath, true);
         drawPath(canvas);
         drawBoat(canvas);
-        drawCircle(canvas);
+
     }
 
-    private void drawCircle(Canvas canvas) {
-        mPaint.setColor(Color.BLUE);
-        mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(currentCircleX, currentCircleY, radius, mPaint);
-    }
+
 
     private void drawPath(Canvas canvas) {
         mPaint.setColor(Color.TRANSPARENT);
@@ -135,7 +131,8 @@ public class ShipWaveViewSecond extends View {
     }
 
     private void resetAni() {
-
+//
+        if (valueAnimator==null)return;
         if (valueAnimator.isRunning()) {
             valueAnimator.cancel();
             startBallAni();
@@ -148,7 +145,7 @@ public class ShipWaveViewSecond extends View {
         super.onLayout(changed, left, top, right, bottom);
         viewWidth = getWidth();
         viewHeight = getHeight();
-        mLevelLine = viewHeight / 2 - 80;
+        mLevelLine = viewHeight/2 - 110;
         currentCircleX = (float) Math.floor(Math.random() * viewWidth);
         currentCircleY = mLevelLine;
         if (!isMeasured) {
@@ -156,11 +153,11 @@ public class ShipWaveViewSecond extends View {
             isMeasured = true;
             int n = (int) Math.round(viewWidth / mWaveWidth + 0.5);
 //            n=1;
-            // n个波形需要4n+1个点，但是我们要预留一个波形在左边隐藏区域，所以需要4n+5个点
-            for (int i = 0; i < (4 * n + 5); i++) {
+            // n个波形需要4n+1个点，
+            for (int i = 0; i < (4 * n)+5; i++) {
                 // 从P0开始初始化到P4n+4，总共4n+5个点
 //                float x = i * mWaveWidth / 4 - mWaveWidth;
-                float x = i * mWaveWidth / 4;
+                float x = i * mWaveWidth / 4-boat.getWidth();
                 float y = 0;
                 switch (i % 4) {
                     case 0:
@@ -187,57 +184,16 @@ public class ShipWaveViewSecond extends View {
         }
     }
 
-    private void startCircleUp() {
-        circleValue = ValueAnimator.ofFloat(currentCircleY,0);
-        circleValue.setDuration(10000);
-        circleValue.setRepeatCount(-1);
-        circleValue.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-
-                currentCircleY = (float) animation.getAnimatedValue();
-
-                invalidate();
-            }
-        });
-        circleValue.start();
-       ValueAnimator circleAlphaValue = ValueAnimator.ofInt(1,0);
-        circleAlphaValue.setDuration(10000);
-        circleAlphaValue.setRepeatCount(-1);
-        circleAlphaValue.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                mPaint.setAlpha((int)(animation.getAnimatedValue()));
-                invalidate();
-            }
-        });
-        circleAlphaValue.start();
-        ValueAnimator circleRadiusValue = ValueAnimator.ofFloat(1,25);
-        circleRadiusValue.setDuration(6000);
-        circleRadiusValue.setRepeatCount(-1);
-        circleRadiusValue.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-
-                radius= (float) animation.getAnimatedValue();
-                if (radius==23){
-                    mPaint.setAlpha(0);
-
-                }
-                invalidate();
-            }
-        });
-        circleRadiusValue.start();
-    }
 
     /**
      * 开始小球的运动
      */
     private void startBallAni() {
+        if (mPathMeature==null)return;
         valueAnimator = ValueAnimator.ofFloat(0, mPathMeature.getLength());
         valueAnimator.setDuration(25000);
-        valueAnimator.setRepeatCount(-1);
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
+        valueAnimator.setRepeatCount(-1);
         valueAnimator.setInterpolator(new LinearInterpolator());
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
