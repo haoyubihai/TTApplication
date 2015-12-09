@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnShipView;
     @Bind(R.id.btn_ship_wave_view)
     Button btnShipWaveView;
+    @Bind(R.id.btn_Flow_lay_Refresh_view)
+    Button btnFlowLayRefreshView;
+    @Bind(R.id.btn_progress_view)
+    Button btnProgressView;
 
 
     @Override
@@ -216,6 +220,19 @@ public class MainActivity extends AppCompatActivity {
     public void onShipWaveClick() {
 
         Intent i = new Intent(this, ShipWaveActivity.class);
+        startActivity(i);
+    }
+
+    @OnClick(R.id.btn_Flow_lay_Refresh_view)
+    public void onFlowFreshClick() {
+
+        Intent i = new Intent(this, FlowAndroidRefreshActivity.class);
+        startActivity(i);
+    }
+    @OnClick(R.id.btn_progress_view)
+    public void onProgressClick() {
+
+        Intent i = new Intent(this, ProgressBarActivity.class);
         startActivity(i);
     }
 

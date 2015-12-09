@@ -77,13 +77,13 @@ public class ShipWaveView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int withSize = MeasureSpec.getSize(widthMeasureSpec);
-        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        int withMode = MeasureSpec.getMode(widthMeasureSpec);
-        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
-        if(withMode==MeasureSpec.AT_MOST&&heightMode==MeasureSpec.AT_MOST){
-            withSize = getMeasuredWidth();
-        }
+//        int withSize = MeasureSpec.getSize(widthMeasureSpec);
+//        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+//        int withMode = MeasureSpec.getMode(widthMeasureSpec);
+//        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+//        if(withMode==MeasureSpec.AT_MOST&&heightMode==MeasureSpec.AT_MOST){
+//            withSize = getMeasuredWidth();
+//        }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
 
